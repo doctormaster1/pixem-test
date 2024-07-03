@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: pixem-test-web
+    restart: unless-stopped
+    ports:
+      - 666:3000
+    volumes:
+      - /opt/pixem-test:/app
