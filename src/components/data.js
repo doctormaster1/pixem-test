@@ -13,13 +13,15 @@ import {
   PuzzlePieceIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../../public/img/benefit-one.png";
-import benefitTwoImg from "../../public/img/benefit-two.png";
+import apiuyygluma from "../../public/img/apiuyygluma-01.png";
+import b2b from "../../public/img/b2b-01.png";
+import seo from "../../public/img/seo-01.png";
+import webtasarm from "../../public/img/webtasarm-01.png";
 
 const benefitWeb = {
   title: "Web Tasarım & Hosting",
   desc: "Modern ve kullanıcı dostu web siteleri tasarlıyor, güvenilir ve hızlı hosting çözümleri sunuyoruz.",
-  image: benefitOneImg,
+  image: webtasarm,
   bullets: [
     {
       title: "Özel Tasarımlar",
@@ -42,7 +44,7 @@ const benefitWeb = {
 const benefitB2b = {
   title: "B2B & E-Ticaret",
   desc: "İşletmeler arası (B2B) çözümler ve e-ticaret platformları ile satışlarınızı artırıyoruz.",
-  image: benefitTwoImg,
+  image: b2b,
   bullets: [
     {
       title: "B2B Çözümleri",
@@ -65,7 +67,7 @@ const benefitB2b = {
 const benefitApi = {
   title: "API & Web Uygulama",
   desc: "Güçlü API çözümleri ve web uygulamaları ile iş süreçlerinizi dijitalleştiriyoruz.",
-  image: benefitTwoImg,
+  image: apiuyygluma,
   bullets: [
     {
       title: "Özel API Geliştirme",
@@ -88,7 +90,7 @@ const benefitApi = {
 const benefitSeo = {
   title: "SEO & Teknik Destek",
   desc: "Web sitenizin arama motorlarında üst sıralarda yer almasını sağlıyor ve 7/24 teknik destek sunuyoruz.",
-  image: benefitTwoImg,
+  image: seo,
   bullets: [
     {
       title: "SEO Optimizasyonu",
