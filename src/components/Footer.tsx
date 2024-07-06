@@ -64,14 +64,14 @@ export function Footer() {
             <div>Bizi Takip Edin</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
-                href="https://instagram.com/web3templates"
+                href="https://www.instagram.com/pixemofficiall/"
                 target="_blank"
                 rel="noopener"
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              <a href="https://www.linkedin.com/company/pixemofficial/" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>

@@ -40,24 +40,9 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Hizmetlerimizin fiyatlandırması nasıl belirleniyor?",
-    answer:
-      "Fiyatlandırma politikamız, hizmetin kapsamına, projenin gereksinimlerine ve müşterinin özel taleplerine göre belirlenir. Farklı ihtiyaçlara yönelik çeşitli paket seçeneklerimiz bulunmaktadır.",
-  },
-  {
-    question: "Projelerimizin süreleri ne kadar sürer?",
-    answer:
-      "Projelerin süreleri, projenin karmaşıklığına ve kapsamına bağlı olarak değişir. Ortalama proje tamamlanma süreleri hakkında bilgi almak için bizimle iletişime geçebilirsiniz. Acil projeler için de özel çözümler sunmaktayız.",
-  },
-  {
     question: "Teknik destek sağlıyor musunuz?",
     answer:
       "Evet, teknik destek sağlıyoruz. Teknik destek taleplerinizi çalışma saatlerimiz içinde iletebilirsiniz. Destek talepleri, web sitemiz üzerinden veya telefonla alınmaktadır.",
-  },
-  {
-    question: "Web sitesi tasarım süreci nasıl işliyor?",
-    answer:
-      "Tasarım süreci, ihtiyaç analizi, taslak oluşturma, revizyonlar ve son olarak site yayına alma aşamalarını içerir. Modern tasarım araçları ve kullanıcı odaklı yaklaşımlar kullanarak projelerinizi hayata geçiriyoruz.",
   },
   {
     question: "SEO hizmetleri sunuyor musunuz?",
@@ -70,11 +55,6 @@ const faqdata = [
       "Evet, web sitesi bakım ve güncelleme hizmetleri sunuyoruz. Bu hizmetler, sitenizin güvenliğini, performansını ve güncelliğini korumak için düzenli olarak gerçekleştirilir.",
   },
   {
-    question: "B2B platformları nasıl çalışır?",
-    answer:
-      "B2B çözümlerimiz, firmaların iş süreçlerini dijitalleştirerek daha verimli ve etkili bir hale getirir. Müşterilerinizle daha kolay ve hızlı iletişim kurmanıza, sipariş yönetimini ve satış süreçlerini optimize etmenize yardımcı olur.",
-  },
-  {
     question: "E-ticaret siteleri için hangi özellikleri sunuyorsunuz?",
     answer:
       "E-ticaret platformlarımız, çeşitli ödeme yöntemlerini destekler, kullanıcı dostu arayüzler sunar ve pazarlama araçları ile entegrasyon sağlar. Ayrıca, analitik ve raporlama özellikleri ile işletmenizin performansını takip edebilirsiniz.",
@@ -83,11 +63,6 @@ const faqdata = [
     question: "Hosting paketleriniz nelerdir?",
     answer:
       "Paylaşımlı hosting, VPS (Virtual Private Server) ve özel sunucu gibi çeşitli hosting seçeneklerimiz bulunmaktadır. Her bir paket, farklı ihtiyaçlara yönelik olarak özellikler ve fiyatlar sunar.",
-  },
-  {
-    question: "Veri güvenliği ve yedekleme hizmetleri sağlıyor musunuz?",
-    answer:
-      "Evet, veri güvenliği ve yedekleme hizmetleri sağlıyoruz. Veri güvenliği politikalarımız, verilerinizin korunmasını ve düzenli yedeklemelerle veri kaybı riskinin en aza indirilmesini garanti eder.",
   },
   {
     question: "Sunucularınızın uptime garantisi nedir?",
