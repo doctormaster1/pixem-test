@@ -12,18 +12,20 @@ import {
 } from "@/components/data";
 export default function Home() {
   return (
-    <Container>
-      <Hero />
-      <div id="hizmetler"></div>
-      <Benefits data={benefitWeb} />
-      <Benefits imgPos="right" data={benefitB2b} />
-      <Benefits data={benefitApi} />
-      <Benefits imgPos="right" data={benefitSeo} />
-      <SectionTitle
-        preTitle="S.S.S"
-        title="Herhangi Bir Sorun Varmı?"
-      ></SectionTitle>
-      <Faq />
-    </Container>
+    <>
+      <Container>
+        <Hero />
+        <div id="hizmetler"></div>
+        <Benefits data={benefitWeb} />
+        <Benefits imgPos="right" data={benefitB2b} />
+        <Benefits data={benefitApi} />
+        <Benefits imgPos="right" data={benefitSeo} />
+        <SectionTitle
+          preTitle="S.S.S"
+          title="Herhangi Bir Sorun Varmı?"
+        ></SectionTitle>
+        <Faq />
+      </Container>
+    </>
   );
 }

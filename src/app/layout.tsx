@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Web Tasarım, E-Ticaret, Yazılım Geliştirme | Pixem",
-  description: "Pixem Web Tasarım ve Geliştirme",
-  keywords: "",
+  description: "Profesyonel web tasarım ve dijital çözümlerle işinizi öne çıkarın.",
+  keywords: "web, b2b, api",
 };
 
 export default function RootLayout({
