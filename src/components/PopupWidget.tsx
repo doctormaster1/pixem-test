@@ -13,7 +13,6 @@ export function PopupWidget() {
     register,
     handleSubmit,
     reset,
-    control,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
@@ -22,21 +21,27 @@ export function PopupWidget() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
 
-  const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
-
   const onSubmit = async (data: any, e: any) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
+    const sendData = {
+      username: "vardibile",
+      password: "Password!!112233",
+      data: {
+        ad: data.name,
+        mail: data.email,
+        mesaj: data.message
+      }
+    };
+    await fetch("https://send.pixem.org/sendPixem/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(data, null, 2),
+      body: JSON.stringify(sendData, null, 2),
     })
       .then(async (response) => {
         let json = await response.json();
-        if (json.success) {
+        if (json.data.Message=="OK") {
           setIsSuccess(true);
           setMessage(json.message);
           e.target.reset();
@@ -58,8 +63,8 @@ export function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <>
-            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
-              <span className="sr-only">Open Contact form Widget</span>
+            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-[#F26A25] rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-[#F26A25] focus:bg-[#F26A25] ease">
+              {/* <span className="sr-only">Open Contact form Widget</span> */}
               <Transition
                 show={!open}
                 enter="transition duration-200 transform ease"
@@ -118,7 +123,7 @@ export function PopupWidget() {
               as="div"
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
-                <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
+                <div className="flex flex-col items-center justify-center h-32 p-5 bg-[#F26A25]">
                   <h3 className="text-lg text-white">Bize Ulaşın?</h3>
                   <p className="text-white opacity-50">
                     İletişim, Fiyat Teklifleri ve Teknik Destek
@@ -127,28 +132,6 @@ export function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}
-                      ></input>
-
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"
@@ -159,7 +142,7 @@ export function PopupWidget() {
                         <input
                           type="text"
                           id="full_name"
-                          placeholder="Necati Serkan Bayraktar"
+                          placeholder="Necati Bayraktar"
                           {...register("name", {
                             required: "Bu alan boş bırakılamaz!",
                             maxLength: 80,
@@ -194,7 +177,7 @@ export function PopupWidget() {
                               message: "Lütfen email adresinizi girin",
                             },
                           })}
-                          placeholder="you@company.com"
+                          placeholder="isim@firma.com"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
                               ? "border-red-600 focus:border-red-600 ring-red-100"
@@ -322,7 +305,7 @@ export function PopupWidget() {
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
-                        className="mt-6 text-indigo-600 focus:outline-none"
+                        className="mt-6 text-[#F26A25] focus:outline-none"
                         onClick={() => reset()}
                       >
                         Geri dön
