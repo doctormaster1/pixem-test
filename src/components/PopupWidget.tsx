@@ -223,7 +223,7 @@ export function PopupWidget() {
                       <div className="mb-3">
                         <button
                           type="submit"
-                          className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                          className="w-full px-3 py-4 text-white bg-[#F26A25] rounded-md focus:bg-[#F26A25] focus:outline-none"
                         >
                           {isSubmitting ? (
                             <svg
@@ -275,7 +275,7 @@ export function PopupWidget() {
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
-                        className="mt-6 text-indigo-600 focus:outline-none"
+                        className="mt-6 text-[#F26A25] focus:outline-none"
                         onClick={() => reset()}
                       >
                         Geri dön
